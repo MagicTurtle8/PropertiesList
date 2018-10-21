@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PropertiesTablet</string>
+    <string name="prefix_dollar_sign">$%1$s</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="content_description_image_view_property">Image view of the property</string>
+</resources>
