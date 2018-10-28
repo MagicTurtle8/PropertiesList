@@ -39,6 +39,6 @@ Through the use of alias resource (a resource that points to another resource), 
 - Common Android Support Libraries
 
 ## References
-https://github.com/googlesamples/android-architecture/tree/todo-mvp/
-https://github.com/ribot/android-guidelines/blob/master/architecture_guidelines/android_architecture.md
-Android Programming - The Big Nerd Ranch Guide 2nd Ed.
+- https://github.com/googlesamples/android-architecture/tree/todo-mvp/
+- https://github.com/ribot/android-guidelines/blob/master/architecture_guidelines/android_architecture.md
+- Android Programming - The Big Nerd Ranch Guide 2nd Ed.
