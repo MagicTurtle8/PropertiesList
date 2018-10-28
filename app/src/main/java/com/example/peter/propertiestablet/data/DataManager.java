@@ -22,7 +22,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class DataManager {
 
-    private static final String BASE_URL = "https://sentia-test.herokuapp.com/properties";
+    private static final String BASE_URL = "https://sentia-test.herokuapp.com/";
     private static Observable observable;
     private static Retrofit retrofit;
 

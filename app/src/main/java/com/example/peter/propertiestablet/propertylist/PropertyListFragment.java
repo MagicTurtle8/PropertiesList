@@ -14,6 +14,7 @@ import android.widget.ProgressBar;
 import com.example.peter.propertiestablet.R;
 import com.example.peter.propertiestablet.data.Property;
 import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -29,7 +30,7 @@ public class PropertyListFragment extends Fragment implements PropertyListContra
 
     private RecyclerView mRecyclerView;
     private PropertyAdapter mPropertyAdapter;
-    private ArrayList<Property> mProperty = new ArrayList<>();
+    private ArrayList<Property> mProperty;
     private ProgressBar mProgressBar;
 
 
@@ -54,7 +55,6 @@ public class PropertyListFragment extends Fragment implements PropertyListContra
         mCallbacks = null;
     }
 
-
     @Override
     public void showProgressBar() {
         mProgressBar.setVisibility(View.VISIBLE);
@@ -66,8 +66,8 @@ public class PropertyListFragment extends Fragment implements PropertyListContra
     }
 
     @Override
-    public void showProperties(ArrayList<Property> properties) {
-        mProperty = properties;
+    public void showProperties(List<Property> properties) {
+        mProperty = new ArrayList<>(properties);
         setupRecyclerView();
     }
 

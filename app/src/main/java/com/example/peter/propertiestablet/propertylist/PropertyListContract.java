@@ -15,7 +15,7 @@ public interface PropertyListContract {
 
         void hideProgressBar();
 
-        void showProperties(ArrayList<Property> properties);
+        void showProperties(List<Property> properties);
     }
 
     interface Presenter {
