@@ -14,8 +14,14 @@ The app UI consists of one fragment for regular devices and 2 fragments for devi
 - List - Uses a RecyclerView to list all the properties found
 - Details - Displays the property Id of the selected property from this list
 
+
+General app architecture shown below, where arrow represents data flow:
+![img](https://i.imgur.com/n7eQo6X.png)
+
+
 ## Libraries used
 - RxJava2
+- Retrofit2
 - Glide
 - Common Android Support Libraries
 
