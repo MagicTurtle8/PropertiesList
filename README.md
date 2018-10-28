@@ -16,6 +16,7 @@ The app UI consists of one fragment for regular devices and 2 fragments for devi
 
 
 General app architecture shown below, where arrow represents data flow:
+
 ![img](https://i.imgur.com/n7eQo6X.png)
 
 ## Handling Device Rotation
@@ -30,6 +31,11 @@ The layout flexibility is done by abstracting both the list and detail fragment 
 Through the use of alias resource (a resource that points to another resource), we can:
 - Point to the phone activity layout for screens less than sw600dp
 - Point to the tablet activity layout for screens more equal to or more than sw600dp.
+
+## Handling Fragment to Activity Communication
+For tablets, when a property is selected from the property list, the adjacent fragment displays the selected property data. To tackle passing the data from the list fragment to detail fragment, a fragment callback interface is implemented by the hosting activity, and therefore the list fragment is able to call methods (onPropertySelected(...)) on its hosting activity, telling it to reload the detail fragment, while passing in the selected property from the list fragment.
+
+![img](https://i.imgur.com/FPvAAbw.png)
 
 
 ## Libraries used
