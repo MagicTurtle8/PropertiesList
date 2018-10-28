@@ -1,6 +1,7 @@
 package com.example.peter.propertiestablet.data;
 
 public class Property {
+
     private String id;
     private String Area;
     private int Bedrooms;

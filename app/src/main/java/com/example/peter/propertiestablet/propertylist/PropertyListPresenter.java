@@ -4,6 +4,8 @@ import android.util.Log;
 
 import com.example.peter.propertiestablet.data.DataManager;
 import com.example.peter.propertiestablet.data.Property;
+import com.example.peter.propertiestablet.data.source.Source;
+
 import java.util.ArrayList;
 import io.reactivex.observers.DisposableObserver;
 
@@ -26,12 +28,15 @@ public class PropertyListPresenter implements PropertyListContract.Presenter {
         DataManager.getObservable().subscribe(getObserver());
     }
 
-    private DisposableObserver<Property> getObserver() {
+    private DisposableObserver<Source> getObserver() {
         final ArrayList<Property> properties = new ArrayList<>();
-        return new DisposableObserver<Property>() {
+        return new DisposableObserver<Source>() {
             @Override
-            public void onNext(Property property) {
-                properties.add(property);
+            public void onNext(Source source) {
+                for (int i = 0; i < source.getData().getListings().size(); i++) {
+                    Property property = DataManager.setPropertyValues(source.getData().getListings().get(i));
+                    properties.add(property);
+                }
             }
 
             @Override

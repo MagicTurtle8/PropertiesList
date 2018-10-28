@@ -18,7 +18,6 @@ public abstract class HostFragmentActivity extends android.support.v4.app.Fragme
         return R.layout.activity_fragment;
     }
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

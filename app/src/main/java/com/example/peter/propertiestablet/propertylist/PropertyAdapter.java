@@ -63,8 +63,6 @@ public class PropertyAdapter extends RecyclerView.Adapter <PropertyAdapter.Prope
         Glide.with(context)
                 .load(prop.getImageUrl())
                 .into(holder.imageView);
-
-        System.out.println("GG");
     }
 
     @Override
